@@ -1,3 +1,6 @@
 [submodule "submodules/name-badges-frontEndMasters-stevekinney"]
 	path = submodules/name-badges-frontEndMasters-stevekinney
 	url = https://github.com/andreasZel/name-badges-frontEndMasters.git
+[submodule "submodules/accident-counter-frontEndMasters-stevekinney"]
+	path = submodules/accident-counter-frontEndMasters-stevekinney
+	url = https://github.com/andreasZel/accident-counter-frontEndMasters.git
