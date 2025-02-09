@@ -4,3 +4,6 @@
 [submodule "submodules/accident-counter-frontEndMasters-stevekinney"]
 	path = submodules/accident-counter-frontEndMasters-stevekinney
 	url = https://github.com/andreasZel/accident-counter-frontEndMasters.git
+[submodule "submodules/inspirational-quotes-frontEndMasters-stevekinney"]
+	path = submodules/inspirational-quotes-frontEndMasters-stevekinney
+	url = https://github.com/andreasZel/inspirational-quotes-frontEndMasters.git
