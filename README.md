@@ -161,7 +161,7 @@ if we have an array value like:
 
 1. `Partial`: makes all of properties optional
 
-2. `Omit`: reoves properties defined
+2. `Omit`: removes properties defined
    for example if we want to remove `id`:
 
    ```Javascript
