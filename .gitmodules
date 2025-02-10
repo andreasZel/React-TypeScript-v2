@@ -7,3 +7,6 @@
 [submodule "submodules/inspirational-quotes-frontEndMasters-stevekinney"]
 	path = submodules/inspirational-quotes-frontEndMasters-stevekinney
 	url = https://github.com/andreasZel/inspirational-quotes-frontEndMasters.git
+[submodule "submodules/colors-frontEndMasters-stevekinney"]
+	path = submodules/colors-frontEndMasters-stevekinney
+	url = https://github.com/andreasZel/colors-frontEndMasters.git
