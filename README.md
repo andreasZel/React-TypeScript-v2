@@ -145,6 +145,18 @@ or maybe generate action basef on formats:
 
 ```
 
+# Getting types from values
+
+if we have an array value like:
+
+```Javascript
+  //readonly
+  const status = ['loading', 'error', 'success'] as const;
+
+  //this gives 'loading' | 'error' | 'success'
+  type Statuses = (typeof status)[number];
+```
+
 # Utils
 
 1. `miragejs` : simulates an API, so that we can make UI before the backend is ready
