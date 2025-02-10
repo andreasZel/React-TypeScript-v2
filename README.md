@@ -68,7 +68,16 @@ const initialState: InitialState = {
   count: 0
 };
 
-const reducer = (state = initialState, action: { type: 'increment' | 'decrement' | 'reset' | 'updateByValue', payload?: number }) => {
+type Action = {
+  type: 'increment' | 'decrement' | 'reset'
+};
+
+type ActionWithPayload = {
+  type: 'updateByValue',
+  payload: number;
+}
+
+const reducer = (state = initialState, action: Action | ActionWithPayload) => {
   const { count } = state;
 
   if (action.type === 'increment') {
