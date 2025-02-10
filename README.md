@@ -104,6 +104,47 @@ const reducer = (state = initialState, action: Action | ActionWithPayload) => {
 const [{ count }, dispatch] = useReducer(reducer, initialState);
 ```
 
+We can redefine each types and define dispatch using the default import from react:
+
+```Javascript
+import { Dispatch } from 'react';
+
+type adjustcountActions = Action | ActionWithPayload;
+
+type AdjustColorsProps = {
+  count: number;
+  dipatch: Dispatch<adjustcountActions>
+};
+```
+
+or we can create a **`global.d.ts`** that has all our types without export
+and the IDE autoImports them!
+
+# Template literals
+
+We can use template literals to dynamically change types like:
+
+```Javascript
+ type HexColor = `#${string}`;
+
+ // we can use the HexColor to check if a color is valid
+ const isHexColor = (s: string): s is HexColor => {
+   return s.startsWith('#');
+ }
+
+ type RGBString = `rgb(${number}, ${number}, ${number})`
+```
+
+or maybe generate action basef on formats:
+
+```Javascript
+ type ColorFormats = 'rgb' | 'hex' | 'hsl' | 'hsv';
+
+ // this will have update-rgb-color, update-hex-color, ...
+ type ActionTypes = `update-${ColorFormats}-color`
+
+```
+
 # Utils
 
 1. `miragejs` : simulates an API, so that we can make UI before the backend is ready
