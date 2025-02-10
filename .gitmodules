@@ -10,3 +10,6 @@
 [submodule "submodules/colors-frontEndMasters-stevekinney"]
 	path = submodules/colors-frontEndMasters-stevekinney
 	url = https://github.com/andreasZel/colors-frontEndMasters.git
+[submodule "submodules/packing-list-frontEndMasters-stevekinney"]
+	path = submodules/packing-list-frontEndMasters-stevekinney
+	url = https://github.com/andreasZel/packing-list-frontEndMasters.git
