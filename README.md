@@ -174,9 +174,6 @@ if we have an array value like:
     type changedItems = Omit<Partial<Item>, 'id'>;
    ```
 
-```
-
 # Utils
 
 1. `miragejs` : simulates an API, so that we can make UI before the backend is ready
-```
