@@ -157,6 +157,26 @@ if we have an array value like:
   type Statuses = (typeof status)[number];
 ```
 
+# Omit and Partial
+
+1. `Partial`: makes all of properties optional
+
+2. `Omit`: reoves properties defined
+   for example if we want to remove `id`:
+
+   ```Javascript
+    type Item = {
+      id: string;
+      name: string;
+      packed: boolean;
+    };
+
+    type changedItems = Omit<Partial<Item>, 'id'>;
+   ```
+
+```
+
 # Utils
 
 1. `miragejs` : simulates an API, so that we can make UI before the backend is ready
+```
