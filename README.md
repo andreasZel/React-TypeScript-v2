@@ -176,8 +176,6 @@ if we have an array value like:
 
 # Generics and Template literals
 
-## Generics
-
 Generics allow us to be a little bit more flexible with our type system.
 We can think of them as variables for your types.
 
@@ -231,6 +229,10 @@ const addNext = <T,>(node: Link<T>, value: T): Link<T> => {
 
 instead of writing multiple `createNode` or `addNext` for number, string or any other
 type, we add a `T` that takes a type and returns it
+
+So basically if we want to enforce a rule we do
+
+`<T extends ...>` or `<T & ...>`, both work
 
 # Utils
 
