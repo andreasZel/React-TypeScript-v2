@@ -174,6 +174,64 @@ if we have an array value like:
     type changedItems = Omit<Partial<Item>, 'id'>;
    ```
 
+# Generics and Template literals
+
+## Generics
+
+Generics allow us to be a little bit more flexible with our type system.
+We can think of them as variables for your types.
+
+For example we might have a `User`:
+
+```Javascript
+  type User = {
+    firstName: string;
+    lastName: string;
+    age: number;
+  }
+```
+
+We want to create Actions, so we need `two Generics`,
+
+- one for the Object `T`
+- one for the key `K`
+
+```Javascript
+  // T is object
+  // K is keyof object & type string
+  type Actions<T, K extends keyof T & string> = {
+    type: `update-${K}`,
+    payload: T[K]
+  }
+```
+
+So we can make an action for the Age like:
+
+```Javascript
+  type UpdateNameAction = Actions<User, 'age'>;
+```
+
+so basically we can use `T` or any generic to avoid redundancy
+for example, if we want to make a function that adds a link node:
+
+```Javascript
+type Link<T> = {
+  value: T;
+  next: Link<T>;
+};
+
+const createNode = <T,>(value: T): Link<T> => ({ value });
+
+const addNext = <T,>(node: Link<T>, value: T): Link<T> => {
+  node.next = createNode(value);
+  return node;
+};
+
+```
+
+instead of writing multiple `createNode` or `addNext` for number, string or any other
+type, we add a `T` that takes a type and returns it
+
 # Utils
 
 1. `miragejs` : simulates an API, so that we can make UI before the backend is ready
